@@ -28,10 +28,21 @@ Como estudiante y entusiasta de ciberseguridad, identifiqué que ejecutar comand
 
 # ¿Cómo funciona?
 
-1. El usuario ejecuta el script.
-2. El sistema solicita una IP o rango de red.
-3. Se ejecuta un escaneo TCP SYN con Nmap.
-4. El resultado se guarda automáticamente en un archivo .txt
+## Ejecución del script
+
+![Reconocimiento](screenshots/captura1.png)
+
+---
+
+## Reporte generado automáticamente
+
+![Reporte](screenshots/captura2.png)
+
+---
+
+## Estructura del proyecto
+
+![Estructura](screenshots/captura3.png)
 
 ---
 

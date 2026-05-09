@@ -1,23 +1,18 @@
-#!/usr/bin/env python3
-
 import os
-import datetime
 
-print("=" * 60)
-print("          AUTO NETWORK RECON")
-print("=" * 60)
+print("=" * 50)
+print(" AUTO NETWORK RECON ")
+print("=" * 50)
 
-objetivo = input("\n[+] Ingresa la IP o rango objetivo: ")
+objetivo = input("Ingresa la IP o rango de red: ")
 
-fecha = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+archivo = "reporte_red.txt"
 
-archivo_reporte = f"reporte_{fecha}.txt"
-
-comando = f"nmap -sS -Pn {objetivo} -oN {archivo_reporte}"
+comando = f"nmap -sS {objetivo} -oN {archivo}"
 
 print("\n[+] Ejecutando escaneo...\n")
 
 os.system(comando)
 
-print("\n[+] Escaneo finalizado correctamente.")
-print(f"[+] Reporte generado: {archivo_reporte}")
+print(f"\n[+] Escaneo completado.")
+print(f"[+] Reporte guardado en: {archivo}")
