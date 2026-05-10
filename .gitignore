@@ -1,3 +1,14 @@
+cat > .gitignore <<
+# Reportes temporales
+reporte_*.txt
+
+# XML temporales
+*.xml
+
+# Cache Python
 __pycache__/
-*.pyc
-*.log
+
+# Archivos temporales Linux
+*.swp
+*.tmp
+
