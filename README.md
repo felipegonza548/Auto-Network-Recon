@@ -1,19 +1,25 @@
 # Auto-Network-Recon
 
-## Nota
-Este proyecto fue desarrollado como Prueba de Concepto (PoC) dentro de mi laboratorio personal de ciberseguridad para automatizar tareas básicas de reconocimiento de red.
+## Descripción
+
+Auto-Network-Recon es una herramienta desarrollada en Python para automatizar procesos básicos de reconocimiento y enumeración de servicios en entornos de laboratorio controlados.
+
+El proyecto integra capacidades de escaneo avanzado con Nmap, generación automatizada de reportes y análisis estructurado de resultados utilizando parsing XML.
+
+Su objetivo principal es optimizar tareas repetitivas de reconocimiento técnico y mejorar la organización de información durante procesos iniciales de análisis de red.
 
 ---
 
-# Descripción
+# Características
 
-Script en Python que automatiza escaneos de red utilizando Nmap y genera reportes organizados en archivos de texto para facilitar el análisis inicial de servicios expuestos.
-
----
-
-# ¿Por qué hice este proyecto?
-
-Como estudiante y entusiasta de ciberseguridad, identifiqué que ejecutar comandos manuales repetitivos consumía tiempo durante procesos de reconocimiento. Desarrollé esta herramienta para optimizar la recolección de información y reforzar mis conocimientos en automatización y análisis de redes.
+- Escaneo TCP SYN automatizado
+- Detección de versiones de servicios
+- Identificación básica de sistema operativo
+- Exportación de resultados en TXT y XML
+- Parsing automatizado de servicios detectados
+- Generación estructurada de reportes
+- Flujo integrado de reconocimiento y análisis
+- Automatización de tareas repetitivas
 
 ---
 
@@ -21,22 +27,68 @@ Como estudiante y entusiasta de ciberseguridad, identifiqué que ejecutar comand
 
 - Python 3
 - Nmap
+- XML Parsing
 - Linux (Kali Linux)
 - Bash
+- Git & GitHub
 
 ---
 
-# ¿Cómo funciona?
+# Arquitectura del Flujo
 
-## Ejecución del script
+La herramienta fue diseñada siguiendo un enfoque modular orientado a automatización y análisis técnico.
 
-![Reconocimiento](screenshots/captura1.png)
+## Flujo General
+
+1. El usuario define un objetivo de red.
+2. Se ejecuta un escaneo avanzado mediante Nmap.
+3. Los resultados se almacenan automáticamente en formatos TXT y XML.
+4. El sistema procesa el XML generado.
+5. Se extraen y organizan servicios, versiones y metadatos relevantes.
+6. La información se presenta de manera estructurada para facilitar análisis posteriores.
 
 ---
 
-## Reporte generado automáticamente
+# Capacidades Técnicas
 
-![Reporte](screenshots/captura2.png)
+- Enumeración automatizada de servicios
+- Detección de versiones y banners
+- Parsing XML utilizando Python
+- Organización estructurada de resultados
+- Automatización de reconocimiento inicial
+- Integración entre Linux, Python y Nmap
+- Procesamiento automatizado de información técnica
+
+---
+
+# Ejecución
+
+## Clonar repositorio
+
+```bash
+git clone https://github.com/felipegonza548/Auto-Network-Recon.git
+cd Auto-Network-Recon
+```
+
+## Ejecutar herramienta
+
+```bash
+python3 escaner.py
+```
+
+---
+
+# Evidencias
+
+## Escaneo avanzado automatizado
+
+![Escaneo](screenshots/captura1.png)
+
+---
+
+## Parsing automático de servicios
+
+![Analisis](screenshots/captura2.png)
 
 ---
 
@@ -46,7 +98,58 @@ Como estudiante y entusiasta de ciberseguridad, identifiqué que ejecutar comand
 
 ---
 
-# Ejecución
+# Ejemplo de Salida
 
-```bash
-python3 escaner.py
+```text
+[+] Puerto: 22
+    Servicio : ssh
+    Producto : OpenSSH
+    Version  : 6.6.1p1 Ubuntu
+
+[+] Puerto: 80
+    Servicio : http
+    Producto : Apache httpd
+    Version  : 2.4.7
+```
+
+---
+
+# Objetivos del Proyecto
+
+Este proyecto fue desarrollado con fines educativos y de fortalecimiento técnico en áreas relacionadas con:
+
+- Automatización
+- Reconocimiento de red
+- Análisis técnico
+- Linux
+- Parsing de datos
+- Ciberseguridad defensiva
+- Documentación técnica
+
+---
+
+# Mejoras Futuras
+
+- Exportación JSON
+- Dashboard visual de resultados
+- Integración con APIs
+- Generación automática de reportes HTML
+- Soporte para múltiples objetivos
+- Historial de escaneos
+- Visualización gráfica de servicios
+
+---
+
+# Disclaimer
+
+Este proyecto fue desarrollado únicamente con fines educativos y de automatización dentro de entornos controlados y autorizados.
+
+El uso indebido de esta herramienta es responsabilidad exclusiva del usuario.
+
+---
+
+# Autor
+
+Luis Felipe Gonzalez Pemberty
+
+Técnico en Ciberseguridad | Linux | Networking | Automatización | Python
